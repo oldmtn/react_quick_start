@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+
+const element = <Welcome name="Sara" />;
+ReactDOM.render(
+  element,
+  document.getElementById('root')
+);
+
+/* Call steps:
+  1. 我们对<Welcome name="Sara" />元素调用了ReactDOM.render()方法。
+  2. React将{name: 'Sara'}作为props传入并调用Welcome组件。
+  3. Welcome组件将<h1>Hello, Sara</h1>元素作为结果返回。
+  4. React DOM将DOM更新为<h1>Hello, Sara</h1>。
+ */
+
+    </script>
+  </body>
+</html>
